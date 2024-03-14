@@ -9,28 +9,28 @@ public class Main{
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int n;
+		int x;
 		int i=0;
 		int j=0;
 		int neg=0;
 		
 		System.out.print("Qual vai ser a ordem da matriz? ");
-		n = sc.nextInt();
+		x = sc.nextInt();
 		
-		int[][] matriz = new int[n][n];
+		int[][] matriz = new int[x][x];
 		
 		System.out.println("Informe os valores: ");
 		
-		for(i=0;i<n;i++) {
-			for(j=0;j<n;j++) {
+		for(i=0;i<x;i++) {
+			for(j=0;j<x;j++) {
 				System.out.print("Elemento ["+i+"]["+j+"]: ");
 				matriz[i][j] = sc.nextInt();
 			}
 		}
 		
 		System.out.println("Diagonal principal: ");
-		for(i=0;i<n;i++) {
-			for(j=0;j<n;j++) {
+		for(i=0;i<x;i++) {
+			for(j=0;j<x;j++) {
 				if(i==j) {
 					System.out.print(matriz[i][j]+ " ");
 				}
@@ -38,8 +38,8 @@ public class Main{
 		}
 		System.out.println();
 		System.out.println("Quantidade de negativos: ");
-		for(i=0;i<n;i++) {
-			for(j=0;j<n;j++) {
+		for(i=0;i<x;i++) {
+			for(j=0;j<x;j++) {
 				if(matriz[i][j]<0) {
 					neg=neg+1;
 				}
